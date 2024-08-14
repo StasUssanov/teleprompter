@@ -1,0 +1,1 @@
+export { WithAntd } from './with-antd';

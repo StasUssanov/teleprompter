@@ -1,0 +1,1 @@
+export { PreObject } from './pre-object';
