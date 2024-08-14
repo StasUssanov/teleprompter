@@ -20,7 +20,7 @@ export type LayoutProps = React.PropsWithChildren<{
     content?: string;
   };
   slots?: {
-    header?: React.ReactNode;
+    header?: React.ReactNode | null;
     titlePage?: React.ReactNode;
     leftSider?: React.ReactNode;
     rightSider?: React.ReactNode;

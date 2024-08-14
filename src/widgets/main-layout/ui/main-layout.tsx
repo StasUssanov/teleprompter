@@ -20,6 +20,9 @@ export type MainLayoutProps = React.PropsWithChildren<{
     titlePage?: React.ReactNode,
     hasButtonBack?: boolean,
     titlePageActions?: React.ReactNode[],
+  },
+  options?: {
+    showHeader?: boolean;
   }
 }>
 
@@ -136,7 +139,7 @@ export const MainLayout: React.FC<MainLayoutProps> = (props) => {
         content: cx(s.content, props.classNames?.content),
       }}
       slots={{
-        header: headerSlotRender,
+        header: (props.options?.showHeader ?? true) ? headerSlotRender : null,
         footer: <Footer slots={{
           left: props.slots?.leftSider ? footerLeftSlotRender : undefined,
           right: 'ver.: 0.1.0',
